@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <title>Maintenance</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+
+    <style>
+      body
+      {
+        background-color:#121212;
+        padding:0;
+        margin:0;
+        zoom:90%;
+
+      }
+      #logo
+      {
+        position:fixed;
+        top:20px;
+        right:1500px;
+        height:180px;
+      }
+      #sideimage
+      {
+        position:fixed;
+        top:0px;
+        right:1450px;
+        height:1500px;  
+        width:50px;
+      }
+      #main
+      {
+        font-size: 800%;
+        color:white;
+        position:absolute;
+        top:-120px;
+        right:240px;
+        border-bottom: 7px solid white;
+
+      }
+      #box2
+      {
+        position:absolute;
+       top:200px;
+       right:130px;
+       height:550px;
+       width:1200px;
+       border: 5px rgb(201, 183, 183) ridge;
+       border-radius: 50px;
+       margin-bottom: 20px;
+      }
+    .loginbox input[type="text"]
+    {
+      width:400px;
+      border:none;
+      border-bottom:3px solid rgb(201, 183, 183);
+      background:transparent;
+      outline:none;
+      height:40px;
+      color:rgb(201, 183, 183);
+      font-size:30px;
+      border-radius:20px;
+      
+    }
+      #form
+      {
+        margin: 70px;
+      }
+      .left
+      {
+        margin-left: 250px;
+      }
+      select{
+        width:400px;
+        box-sizing: border-box;
+        background:#121212;
+        margin-top:30px;
+        border:none;
+        border-bottom:3px solid rgb(201, 183, 183);
+        color: rgb(201, 183, 183);
+        border-radius:20px;
+        font-size:30px;
+        box-shadow: 0 05px 25px #121212(0,0,0,0.5);
+        
+        
+
+      }
+      
+      .ip
+      {
+        margin-top: 30px;
+      }
+      input[type="submit"]
+      {
+        width: 30%;
+        
+        box-sizing:border-box;
+        padding:10px 0;
+        margin-top:55px;
+        margin-left: 380px;
+        outline:none;
+        border:none;
+        background:#2CB0D6;
+        border-radius:20px;
+        
+        font-size:20px;
+        color:black;
+        
+          
+      }
+      .loginbox input[type="submit"]:hover
+    {
+      cursor:pointer;
+      background:green;
+      
+    }
+    .loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+        
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <img src="ring (1).gif" alt="Loading..." />
+  </div>
+    <div id="box" class="loginbox">
+      <a href="webpageusingcss.html"><img src="logo.png" id="logo"></a>
+      <img id="sideimage"  src="capture.jpg">
+      <p id="main">Room Maintenance</p>
+      <div id="box2">
+        <form id="form" method="get">
+          <input type="text" name="firstname" placeholder="First Name">
+          <input type="text" name="last name" class="left" placeholder="Last Name">
+          <p><select name="block">
+            <option>A-Block</option>
+              <option>B-Block</option>
+              <option >B-Annex</option>
+              <option>C-Block</option>
+              <option>D-Block</option>
+              <option>D-Annex</option>
+              <option>E-Block</option>
+              <option>F-Block</option>
+              <option>G-Block</option>
+              <option>H-Block</option>
+              <option>J-Block</option>
+              <option>K-Block</option>
+              <option>L-Block</option>
+              <option>M-Block</option>
+              <option>N-Block</option>
+              <option>P-Block</option>
+              <option>Q-Block</option>
+          </select></p>
+          <p><input type="text" name="room" placeholder="Room-No" class="ip"></p>
+          <p><select name="block">
+              <option>Electric Appliances Repair</option>
+              <option>Wifi Repair</option>
+              <option >Furniture Repair</option>
+              <option>Power Related</option>
+              <option> Others</option>
+          </select></p>
+          <p><input type="submit" value="Register for Maintenance" class=""></p>
+
+
+
+        </form>
+
+
+      </div>
+
+
+    </div>
+    <script>
+      window.addEventListener("load", function () {
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden"; // class "loader hidden"
+      });
+    </script>
+  </body>
+</html>
