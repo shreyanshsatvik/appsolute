@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <title>signup</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <style>
+      body
+      {
+        background-color:#121212;
+        padding:0;
+        margin:0;
+        zoom:90%;
+        font-family: 'Rubik', sans-serif;
+
+      }
+      .fullbody  
+      {
+        max-width: 1050px;
+        height:630px;
+        border-radius: 20px;
+        margin:auto;
+        background:rgba(0,0,0,0.8);
+        box-sizing:border-box;
+        padding:40px;
+        margin-top:100px;
+        
+      }
+      h2
+      {
+        text-align: center;
+        color:white;
+        
+
+      }
+      input[type=text] , input[type="password"],input[type="number"] 
+      {
+        
+        align:right;
+        width:450px;
+        background:transparent;
+        outline:none;
+        border:none;
+        border-bottom:1px dotted #fff;
+        color:white;
+        border-radius:5px;
+        margin:5px;
+        font-weight:bold;
+        font-size:100%;
+      }
+      select{
+        
+        width:450px;
+        box-sizing: border-box;
+        background:black;
+        outline:none;
+        border:none;
+        border-bottom:1px dotted #fff;
+        color:whitesmoke;
+        border-radius:20px;
+        margin:5px;
+
+      }
+      input[type="submit"]
+      {
+        
+        margin-left:30px;
+        width: 40%;
+        align:left;
+        box-sizing:border-box;
+        padding:10px 0;
+        margin-top:25px;
+        outline:none;
+        border:none;
+        background:#2FB8D9;
+        border-radius:20px;
+        opacity:0.7;
+        font-size:20px;
+        color:#fff;
+        
+          
+      }
+      input[type="submit"]:hover{
+        background: #2FB8D9;
+        opacity:1.0;
+        cursor:pointer;
+        
+      }
+      #logo
+      {
+        position:relative;
+        float:right;
+        margin-right:50px;
+        top:50px;
+      }
+
+
+      
+    
+    
+    </style>
+  </head>
+  <body>
+    <div class ="fullbody">
+      <h2>Sign-Up Here</h2>
+      <div >
+        <a href="webpageusingcss.html"> <img src="logo.png" id="logo"></a>
+
+      </div>
+      <form>
+       <p> <input type="text" placeholder="First Name" required></p>
+       <p> <input type="text" placeholder="Last Name" required></p>
+       <p><input type="text" placeholder="Email Id" required></p>
+       <p><input type="text" placeholder="Username" required></p>
+       <p>  <input type="password" placeholder="Password" required> </p>
+        <p>  <input type="password" placeholder="Re-type password" required>
+        <p><select>
+          <option>Male</option>
+          <option>Female</option>
+          <option >Others</option>
+          </select></p>
+          <p>
+            <select >
+              <option>A-Block</option>
+              <option>B-Block</option>
+              <option >B-Annex</option>
+              <option>C-Block</option>
+              <option>D-Block</option>
+              <option>D-Annex</option>
+              <option>E-Block</option>
+              <option>F-Block</option>
+              <option>G-Block</option>
+              <option>H-Block</option>
+              <option>J-Block</option>
+              <option>K-Block</option>
+              <option>L-Block</option>
+              <option>M-Block</option>
+              <option>N-Block</option>
+              <option>P-Block</option>
+              <option>Q-Block</option>
+              </select>
+          </p>
+          <p><input type="number" placeholder="Room No"></p>
+       <p></p> <input type="submit" value="Submit">
+       
+           
+          
+      </form>
+    </div>
+
+
+  </body>
+</html>
