@@ -6,7 +6,7 @@ session_start();
 ?>
 <html>
   <head>
-    <title>Payment Page</title>
+    <title>Ambulance</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 
     <style>
@@ -17,6 +17,7 @@ session_start();
         margin:0;
         zoom:90%;
         font-family: 'Rubik', sans-serif;
+        box-sizing: border-box;
 
       }
       #logo
@@ -60,7 +61,7 @@ session_start();
         font-size: 200%;
         color: white;
         position: relative;
-        right:-45px;
+        right:-35px;
       }
       .random
       {
@@ -103,7 +104,8 @@ session_start();
       background:lightslategrey;
       
       }
-      header {
+      
+header {
   display: flex;
   justify-content: flex-end ;
   align-items: center;
@@ -232,45 +234,43 @@ session_start();
     <body>
     <header>
           
-          <nav>
-              <ul class="nav__links">
-                  <li><a href="roomcleaning.php">Room Cleaning</a></li>
-                  <li><a href="nightcanteen.php">Night Canteen</a></li>
-                  <li><a href="maintenance.php">Maintenance</a></li>
-                  <li><a href="map.php">Cab Tracking</a></li>
-                  <li><a href="ambulance.php">Emergency Service</a></li>
-              </ul>
-          </nav>
-          <a class="cta" href="webpageusingcss.php">Log-Out</a>
-          <p class="menu cta">Menu</p>
-      </header>
-      <div id="mobile__menu" class="overlay">
-          <a class="close">&times;</a>
-          <div class="overlay__content">
-              <a href="#">Services</a>
-              <a href="#">Projects</a>
-              <a href="#">About</a>
-          </div>
-      </div>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="roomcleaning.php">Room Cleaning</a></li>
+                    <li><a href="nightcanteen.php">Night Canteen</a></li>
+                    <li><a href="maintenance.php">Maintenance</a></li>
+                    <li><a href="map.php">Cab Tracking</a></li>
+                    <li><a href="ambulance.php">Emergency Service</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="webpageusingcss.php">Log-Out</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div id="mobile__menu" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+            </div>
+        </div>
         <a href="homepage.php"><img src="logo.png" id="logo"></a>
         <img id="sideimage"  src="capture.jpg">
         <div id ="box">
-          <img src="tick.png" id="tick">
-          <p class ="font"><u>Payment Successful</u></p>
+          <img src="ambulance.png" id="tick">
+          <p class ="font"><u>Ambulance on the way</u></p>
         
           <p id="random" class="random"></p>
           <p id="thank"></p>
-          <a href="payementdone.html" download="receipt.html"><p><input type="submit" value="Download Receipt" class=""></p></a>
+          <a href="homepage.php"><p><input type="submit" value="Go to homepage" class=""></p></a>
   
           
 
         </div>
         <script type= "text/javascript">
   
-            var x = Math.floor((Math.random() * 100) + 1);
-            document.getElementById("random").innerHTML = "Your Token No is ---" +" "+ x;
             var y = Math.floor((Math.random() * 20) + 1);
-            document.getElementById("thank").innerHTML = "Your food will be ready in :" +" "+ y+"minutes.";
+            document.getElementById("thank").innerHTML = "Your ambulance will reach in :" +" "+ y+"minutes.";
 
           
           

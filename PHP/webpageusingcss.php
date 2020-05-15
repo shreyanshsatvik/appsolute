@@ -118,7 +118,7 @@ right:-350px;
 #sideimage
 {
 position:relative;
-top:130px;
+top:190px;
 right:-100px;
 height:2000px;
 width:50px;
@@ -228,6 +228,12 @@ position:absolute;
 top:1900px;
 }
 
+#f
+{
+  position:absolute;
+  top:2250px;
+}
+
 .new
 
 {
@@ -238,6 +244,53 @@ right:550px;
 a:hover{
   color:green;
 }
+}
+.container{
+  position:relative;
+  text-align: center;
+  margin-top: 360px;
+
+}
+.btn{
+  border: 2px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  right:-455px;
+}
+.btn2{
+  color: #3498db;
+}
+
+.btn2:hover{
+  color: #fff;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn2::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.btn2:hover::before{
+  height: 180%;
+}
+
+
 
 
 
@@ -245,7 +298,6 @@ a:hover{
 
 </style>
 </head>
-
 <body>
 <div id="topbar">
 <a href="webpageusingcss.html"><img id="logo" src="logo.png" ></a>
@@ -267,7 +319,7 @@ a:hover{
 <span id="login">Maintenance</span>
 </div>
 <div id="tracking" class="top-barsection">
-<a href="tracking.html"><img id="gpsimage" src="gps4.png"></a>
+<a href="map.html"><img id="gpsimage" src="gps4.png"></a>
 <span id="login">Cab-Tracking</span>
 </div>
 <div id="Emergency-Services" class="top-barsection">
@@ -289,28 +341,54 @@ complain and call ambulance.</h2>
 <h2 id="b">On clicking on the link given below you will be redirected to a webpage to
 register for room cleaning.
 <br><br><br>
-<a href="roomcleaning.html" class="new">Click Here to register</a>
+<div class="container" >
+  
+  <a href="night-canteen.html"><button class="btn btn2">Register Here</button></a>
+  
+</div>
+
 </h2>
 <h1 id="ha3">Night-Canteen</h1>
 <h2 id="c">Now book your food from your respective night-canteen and take it 
 when your token number comes.
 <br><br><br>
-<a href="night-canteen.html" class="new">Click here to book </a>
+<div class="container" >
+  
+  <a href="nightcanteen.html"><button class="btn btn2">Order your food</button></a>
+  
+</div>
 </h2>
 <h1 id="ha4">Maintenance</h1>
 <h2 id="d">Now register your complain for any appliances related problem of 
 your hostel room .
 <br><br><br>
-<a href="maintenance.html" class="new">Click here to register</a>
+<div class="container" >
+  
+  <a href="maintenance.html"><button class="btn btn2">Register Here</button></a>
+  
+</div>
+
 </h2>
 <h1 id="ha5">Cab-Tracking</h1>
 <h2 id="e">Now no more wait for a shuttle just check the location of your cab from the 
 given link.
 <br><br><br>
-<a href="tracking.html" class="new">Locate your shuttle</a>
+<div class="container" >
+  
+  <a href="map.html"><button class="btn btn2">Locate your shuttle</button></a>
+  
+</div>
+
+
 </h2>
 <h1 id="ha6">Emergency-Services</h1>
-
+<h2 id="f">No need to go to block guard to call ambulance directly call ambulance from the given link.
+  <br><br><br>
+  <div class="container" >
+  
+    <a href="ambulance.html"><button class="btn btn2">Call Ambulance</button></a>
+    
+  </div>
 
 
 </div>

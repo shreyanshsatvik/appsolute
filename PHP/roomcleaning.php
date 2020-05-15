@@ -75,20 +75,20 @@ $link=mysqli_connect("localhost","root","","sign-up");
       }
       #main
       {
-        font-size: 800%;
+        font-size: 700%;
         color:white;
         position:absolute;
-        top:-120px;
-        right:340px;
+        top:-40px;
+        right:400px;
         border-bottom: 7px solid white;
 
       }
       #box2
       {
         position:absolute;
-       top:200px;
+       top:240px;
        right:130px;
-       height:550px;
+       height:530px;
        width:1200px;
        border: 5px rgb(201, 183, 183) ridge;
        border-radius: 50px;
@@ -118,13 +118,14 @@ $link=mysqli_connect("localhost","root","","sign-up");
       select{
         width:400px;
         box-sizing: border-box;
-        background:transparent;
+        background:#121212;
         margin-top:30px;
         border:none;
         border-bottom:3px solid rgb(201, 183, 183);
         color: rgb(201, 183, 183);
         border-radius:20px;
         font-size:30px;
+        box-shadow: 0 05px 25px #121212(0,0,0,0.5);
 
       }
       .ip
@@ -155,6 +156,129 @@ $link=mysqli_connect("localhost","root","","sign-up");
       background:red;
       
     }
+    header {
+  display: flex;
+  justify-content: flex-end ;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #121212;
+}
+
+
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  margin-right:-70px;
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+
         
 
 
@@ -162,8 +286,30 @@ $link=mysqli_connect("localhost","root","","sign-up");
     </style>
   </head>
   <body>
+  <header>
+          
+          <nav>
+              <ul class="nav__links">
+                  <li><a href="roomcleaning.php">Room Cleaning</a></li>
+                  <li><a href="nightcanteen.php">Night Canteen</a></li>
+                  <li><a href="maintenance.php">Maintenance</a></li>
+                  <li><a href="map.php">Cab Tracking</a></li>
+                  <li><a href="ambulance.php">Emergency Service</a></li>
+              </ul>
+          </nav>
+          <a class="cta" href="webpageusingcss.php">Log-Out</a>
+          <p class="menu cta">Menu</p>
+      </header>
+      <div id="mobile__menu" class="overlay">
+          <a class="close">&times;</a>
+          <div class="overlay__content">
+              <a href="#">Services</a>
+              <a href="#">Projects</a>
+              <a href="#">About</a>
+          </div>
+      </div>
     <div id="box" class="loginbox">
-      <a href="webpageusingcss.html"><img src="logo.png" id="logo"></a>
+      <a href="homepage.php"><img src="logo.png" id="logo"></a>
       <img id="sideimage"  src="capture.jpg">
       <p id="main">Room Cleaning</p>
       <div id="box2">

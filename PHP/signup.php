@@ -1,16 +1,20 @@
 <html>
   <head>
     <title>signup</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <style>
-      body{
-      background: url("abstract-1780148.png");
-      background-size:cover;
-      font-family:Arial;
-      color:white;
+      body
+      {
+        background-color:#121212;
+        padding:0;
+        margin:0;
+        zoom:90%;
+        font-family: 'Rubik', sans-serif;
+
       }
       .fullbody  
       {
-        max-width: 550px;
+        max-width: 1050px;
         height:610px;
         border-radius: 20px;
         margin:auto;
@@ -18,63 +22,77 @@
         box-sizing:border-box;
         padding:40px;
         margin-top:100px;
-        
+        /*box-shadow: 10px 20px #000;
+        */
       }
       h2
       {
-        text-align: center;
+        position:relative;
+        top:-15px;
         color:white;
-        opacity:0.7;
+        left:150px;
+        
 
       }
       input[type=text] , input[type="password"],input[type="number"] 
       {
-        align:center;
+        
+        align:right;
         width:450px;
-        box-sizing:border-box;
         background:transparent;
         outline:none;
         border:none;
         border-bottom:1px dotted #fff;
-        color:darkolivegreen;
+        color:white;
         border-radius:5px;
         margin:5px;
         font-weight:bold;
         font-size:100%;
       }
       select{
+        
         width:450px;
         box-sizing: border-box;
-        background:transparent;
+        background:black;
         outline:none;
         border:none;
         border-bottom:1px dotted #fff;
-        color:darkolivegreen;
+        color:whitesmoke;
         border-radius:20px;
         margin:5px;
 
       }
       input[type="submit"]
       {
-        width: 100%;
         
+        margin-left:30px;
+        width: 40%;
+        align:left;
         box-sizing:border-box;
         padding:10px 0;
         margin-top:25px;
         outline:none;
         border:none;
-        background:#425968;
+        background:#2FB8D9;
         border-radius:20px;
-        opacity:0.6;
+        opacity:0.7;
         font-size:20px;
         color:#fff;
         
           
       }
       input[type="submit"]:hover{
-        background:red;; 
-        opacity:0.5;
+        background: #2FB8D9;
+        opacity:1.0;
+        cursor:pointer;
         
+      }
+      #logo
+      {
+        position:relative;
+        float:right;
+        margin-right:50px;
+        top:80px;
       }
 
 
@@ -96,7 +114,7 @@
      $query= "INSERT INTO `signup` (`First Name`, `Last Name`, `Email-Id`, `Username`, `Password`, `Gender`, `Block`, `Room-No`) VALUES ('".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['username']."','".$_POST['password']."','".$_POST['gender']."','".$_POST['block']."','".$_POST['room']."')";
       if(mysqli_query($link,$query))
       {
-        echo"<p>You have been signed Up.</p>";
+        header("Location:login.php");
       }
       else
       {
@@ -106,6 +124,10 @@
     }
     ?>
    <div class ="fullbody">
+   <div >
+        <a href="webpageusingcss.html"> <img src="logo.png" id="logo"></a>
+
+      </div>
       <h2>Sign-Up Here</h2>
       <form method="POST">
        <p> <input type="text" placeholder="First Name" required name="firstname"></p>

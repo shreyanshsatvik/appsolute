@@ -178,6 +178,11 @@
       background:lightslategrey;
       
     }
+    #signup
+    {
+      position:relative;
+      top:10px;
+    }
 
 
   </style>
@@ -195,8 +200,9 @@
           <p><input type="text" placeholder="username" name="username" required></input></p>
           <p><input type="password" placeholder="password" name="password" required></p>
           <p><input type="submit" value="Login"></p>
-          <p><a href="signup.php">Don't have an account?</a></p>
-          <a href="forgot.html">Forgot Password?</a>
+          
+          <p id="signup"><a href="signup.php">Don't have an account?</a></p>
+          
 
         </form>
       </div>

@@ -2,22 +2,31 @@
 session_start();
 
 
-
 ?>
+
+
 <html>
   <head>
-    <title>Payment Page</title>
+    <title>Workers</title>
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 
-    <style>
-      body
+  <style>
+    body
+    {
+      background-color:#121212;
+      padding:0;
+      margin:0;
+      font-family: 'Rubik', sans-serif;
+      zoom:90%;
+      
+    }
+    #sideimage
       {
-        background-color:#121212;
-        padding:0;
-        margin:0;
-        zoom:90%;
-        font-family: 'Rubik', sans-serif;
-
+        position:fixed;
+        top:0px;
+        right:1450px;
+        height:1500px;  
+        width:50px;
       }
       #logo
       {
@@ -26,84 +35,56 @@ session_start();
         right:1500px;
         height:180px;
       }
-      #sideimage
-      {
-        position:fixed;
-        top:0px;
-        right:1450px;
-        height:1500px;  
-        width:50px;
-      }
       #box
       {
+        height:450px;
+        width:350px;
         position:absolute;
-        height:500px;
-        width:400px;
         right:600px;
-        top:180px;
-        border: 5px rgb(201, 183, 183)ridge;
+        top:220px;
+        border: 5px rgb(201, 183, 183) ridge;
         border-radius: 50px;
-
-      }
-      #tick
-      {
-        position:relative;
-        height:200px;
-        width:200px;
-        top:10px;
-        right:-100px;
-
-      
-      }
-      .font
-      {
-        font-size: 200%;
-        color: white;
-        position: relative;
-        right:-45px;
-      }
-      .random
-      {
-        position: relative;;
-        color:white;
-        right:-60px;
-        font-size: 150%;
-
-
-      }
-      #thank
-      {
-        position: relative;;
-        color:white;
-        right:-35px;
-        font-size: 120%;
-
-      }
-      input[type="submit"]
-      {
-        width: 50%;
+        }
+        #worker
+        {
+          height:180px;
+          width:180px;
+          position: absolute;
+          top:30px;
+          right:90px;
+          margin-bottom: 50px;
+        }
+        #first
+        {
+          position:absolute;
         
-        box-sizing:border-box;
-        padding:10px 0;
-        margin-top:25px;
-        margin-left: 95px;
-        outline:none;
-        border:none;
-        background:#2CB0D6;
-        border-radius:20px;
+          top:250px;
         
-        font-size:20px;
-        color:black;
-        
-          
-      }
-      input[type="submit"]:hover
-      {
-      cursor:pointer;
-      background:lightslategrey;
-      
-      }
-      header {
+        }
+        .text
+        {
+          margin-bottom: 40px;
+          margin-left: 40px;
+          font-size: 150%;
+          color:white;
+        }
+        #second
+        {
+          position:absolute;
+          top:300px;
+        }
+        #third
+        {
+          position:absolute;
+          top:350px;
+        }
+        #fourth
+        {
+          position:absolute;
+          top:400px;
+
+        }
+        header {
   display: flex;
   justify-content: flex-end ;
   align-items: center;
@@ -228,9 +209,12 @@ session_start();
 
 
 
-    </style>
-    <body>
-    <header>
+
+
+  </style>
+  </head>
+  <body>
+  <header>
           
           <nav>
               <ul class="nav__links">
@@ -252,30 +236,15 @@ session_start();
               <a href="#">About</a>
           </div>
       </div>
-        <a href="homepage.php"><img src="logo.png" id="logo"></a>
-        <img id="sideimage"  src="capture.jpg">
-        <div id ="box">
-          <img src="tick.png" id="tick">
-          <p class ="font"><u>Payment Successful</u></p>
-        
-          <p id="random" class="random"></p>
-          <p id="thank"></p>
-          <a href="payementdone.html" download="receipt.html"><p><input type="submit" value="Download Receipt" class=""></p></a>
-  
-          
+    <img src="Capture.JPG" id="sideimage">
+    <a href="homepage.php"><img src="logo.png" id="logo"></a>
+    <div id="box">
+      <img src="worker.png" id="worker">
+      <p id="first" class="text">Name:- <?php echo $_SESSION['repairworkername'] ?></p>
+      <p id="Second" class="text">Id:- <?php echo $_SESSION['repairid'] ?></p>
+      <p id="third" class="text">Mobile:-<?php echo $_SESSION['repairworkermobile'] ?></p>
+      
+    </div>
+  </body>
 
-        </div>
-        <script type= "text/javascript">
-  
-            var x = Math.floor((Math.random() * 100) + 1);
-            document.getElementById("random").innerHTML = "Your Token No is ---" +" "+ x;
-            var y = Math.floor((Math.random() * 20) + 1);
-            document.getElementById("thank").innerHTML = "Your food will be ready in :" +" "+ y+"minutes.";
-
-          
-          
-          </script>
-          
-    </body>
-  </head>
 </html>
